@@ -1,0 +1,31 @@
+service: lambda
+plugins:
+  - serverless-localstack
+
+frameworkVersion: '3'
+
+custom:
+  localstack:
+    debug: true
+    stages:
+      - local
+      - dev
+    endpointFile: localstack_endpoints.json
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+      - httpApi: 'GET /hello'
+  hello2:
+    handler: handler.hello2
+    events:
+      - http:
+          path: hello2
+          method: get
