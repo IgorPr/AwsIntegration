@@ -10,8 +10,9 @@ jobs:
     name: deploy lambda from source
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v3
-        - uses: appleboy/lambda-action@master
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+        - uses: aws-actions/configure-aws-credentials@v1
           with:
             aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
             aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
