@@ -10,13 +10,11 @@ jobs:
     name: deploy lambda from source
     runs-on: ubuntu-latest
     steps:
-      - name: checkout source code
-        uses: actions/checkout@main
-      - name: default deploy
-        uses: IgorPr/AwsIntegration@main
-        with:
-          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws_region: ${{ secrets.AWS_REGION }}
-          function_name: lambda-cd
-          source: handler.py
+        - uses: actions/checkout@v2
+        - uses: IgorPr/AwsIntegration@main
+          with:
+            aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws_region: ${{ secrets.AWS_REGION }}
+            function_name: lambda-cd
+            source: handler.py
