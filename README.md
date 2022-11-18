@@ -21,6 +21,7 @@ gh secret set AWS_REGION
 #### To make sure your credentials have been uploaded correctly, you can list the available GitHub secrets:
 gh secret list
 
-npm install -g serverless
-npm install --save-dev serverless-localstack
+
+aws configure --profile localstack
+
 serverless deploy --stage local

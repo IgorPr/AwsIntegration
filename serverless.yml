@@ -9,7 +9,6 @@ custom:
     debug: true
     stages:
       - local
-      - dev
     endpointFile: localstack_endpoints.json
 provider:
   name: aws
