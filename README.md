@@ -22,5 +22,5 @@ gh secret set AWS_REGION
 gh secret list
 
 npm install -g serverless
-
+npm install --save-dev serverless-localstack
 serverless deploy --stage local
