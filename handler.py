@@ -17,7 +17,7 @@ def hello(event, context):
 
 def hello2(event, context):
     body = {
-        "message": "Heellllooooo Moto!",
+        "message": "Helo Moto!",
         "input": event
     }
 
