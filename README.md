@@ -18,10 +18,11 @@ gh secret set AWS_SECRET_ACCESS_KEY
 #### AWS_REGION:
 gh secret set AWS_REGION
 
-#### To make sure your credentials have been uploaded correctly, you can list the available GitHub secrets:
+#### To  make sure your credentials have been uploaded correctly, you can list the available GitHub secrets:
 gh secret list
 
 
 aws configure --profile localstack
 
+# (serverless deploy)
 serverless deploy --stage local

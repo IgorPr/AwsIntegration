@@ -1,6 +1,4 @@
 service: lambda
-plugins:
-  - serverless-localstack
 
 frameworkVersion: '3'
 
@@ -9,7 +7,9 @@ custom:
     debug: true
     stages:
       - local
+      - dev
     endpointFile: localstack_endpoints.json
+
 provider:
   name: aws
   runtime: python3.9

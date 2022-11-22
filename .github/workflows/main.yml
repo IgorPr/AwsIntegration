@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - dev
 jobs:
   deploy_source:
     name: deploy lambda from source
